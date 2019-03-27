@@ -1,8 +1,8 @@
 # Graphql Client Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+this is a little sample how to user graphql cliente to consume an webapi
 
-## Development server
+# RUN
+## Npm install and Npm start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
- 
+
