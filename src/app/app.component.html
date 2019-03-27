@@ -1,0 +1,48 @@
+<form>
+  <div class="div-main">
+    <div class="div-item">
+      <div style="width: 100%;">
+        <mat-form-field style="width: 100%;">
+          <mat-label>Family</mat-label>
+          <mat-select (selectionChange)="SelectedFamily($event.value)">
+            <mat-option *ngFor="let family of families" [value]="family">
+              {{ family.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field style="width: 100%;">
+          <mat-label>Members</mat-label>
+          <mat-select (selectionChange)="SelectedMember($event.value)">
+            <mat-option *ngFor="let member of members" [value]="member">
+              {{ member.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="div-item">
+      <mat-card style="width: 300px;" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Family Name :{{ familyName }}</mat-card-title>
+          <mat-card-subtitle>Member Name :{{ memberName }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img *ngIf="picture!=''"
+
+          mat-card-image
+          [src]="picture"
+        />
+      </mat-card>
+    </div>
+  </div>
+
+  <div
+    [ngClass]="divModalShow == true ? 'div-model' : 'div-model-hidden'"
+    class="div-modal"
+  >
+    <img src="../assets/img/loading.gif" alt="" />
+  </div>
+</form>
